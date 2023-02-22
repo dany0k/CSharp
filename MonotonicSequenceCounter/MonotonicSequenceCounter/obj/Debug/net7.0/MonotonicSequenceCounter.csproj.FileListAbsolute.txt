@@ -1,0 +1,15 @@
+Z:\VSU\3course\CSharp\MonotonicSequenceCounter\MonotonicSequenceCounter\bin\Debug\net7.0\MonotonicSequenceCounter.exe
+Z:\VSU\3course\CSharp\MonotonicSequenceCounter\MonotonicSequenceCounter\bin\Debug\net7.0\MonotonicSequenceCounter.deps.json
+Z:\VSU\3course\CSharp\MonotonicSequenceCounter\MonotonicSequenceCounter\bin\Debug\net7.0\MonotonicSequenceCounter.runtimeconfig.json
+Z:\VSU\3course\CSharp\MonotonicSequenceCounter\MonotonicSequenceCounter\bin\Debug\net7.0\MonotonicSequenceCounter.dll
+Z:\VSU\3course\CSharp\MonotonicSequenceCounter\MonotonicSequenceCounter\bin\Debug\net7.0\MonotonicSequenceCounter.pdb
+Z:\VSU\3course\CSharp\MonotonicSequenceCounter\MonotonicSequenceCounter\obj\Debug\net7.0\MonotonicSequenceCounter.csproj.AssemblyReference.cache
+Z:\VSU\3course\CSharp\MonotonicSequenceCounter\MonotonicSequenceCounter\obj\Debug\net7.0\MonotonicSequenceCounter.GeneratedMSBuildEditorConfig.editorconfig
+Z:\VSU\3course\CSharp\MonotonicSequenceCounter\MonotonicSequenceCounter\obj\Debug\net7.0\MonotonicSequenceCounter.AssemblyInfoInputs.cache
+Z:\VSU\3course\CSharp\MonotonicSequenceCounter\MonotonicSequenceCounter\obj\Debug\net7.0\MonotonicSequenceCounter.AssemblyInfo.cs
+Z:\VSU\3course\CSharp\MonotonicSequenceCounter\MonotonicSequenceCounter\obj\Debug\net7.0\MonotonicSequenceCounter.csproj.CoreCompileInputs.cache
+Z:\VSU\3course\CSharp\MonotonicSequenceCounter\MonotonicSequenceCounter\obj\Debug\net7.0\MonotonicSequenceCounter.dll
+Z:\VSU\3course\CSharp\MonotonicSequenceCounter\MonotonicSequenceCounter\obj\Debug\net7.0\refint\MonotonicSequenceCounter.dll
+Z:\VSU\3course\CSharp\MonotonicSequenceCounter\MonotonicSequenceCounter\obj\Debug\net7.0\MonotonicSequenceCounter.pdb
+Z:\VSU\3course\CSharp\MonotonicSequenceCounter\MonotonicSequenceCounter\obj\Debug\net7.0\MonotonicSequenceCounter.genruntimeconfig.cache
+Z:\VSU\3course\CSharp\MonotonicSequenceCounter\MonotonicSequenceCounter\obj\Debug\net7.0\ref\MonotonicSequenceCounter.dll
