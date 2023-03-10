@@ -1,0 +1,21 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="400" d:DesignHeight="450"
+        x:Class="Task2Linux.MainWindow"
+        Title="Task2Linux" Height="450" Width="350">
+    <Grid>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <StackPanel>
+                <TextBlock>NameN</TextBlock>
+                <TextBox Name="NameNText" Width="300" Height="100" VerticalAlignment="Top" Margin="20"></TextBox>
+            </StackPanel>
+            <StackPanel>
+                <TextBlock>NameT</TextBlock>
+                <TextBox Name="NameTText" Width="300" Height="100" VerticalAlignment="Top" Margin="20"></TextBox>
+            </StackPanel>
+        </StackPanel>
+        <Button x:Name="ProcessButton" Width="100" Height="30" HorizontalAlignment="Center" Content="Process" Click="ProcessButton_OnClick"/>
+    </Grid>
+</Window>
