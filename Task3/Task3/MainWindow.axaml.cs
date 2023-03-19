@@ -1,14 +1,12 @@
 using System;
-using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Interactivity;
-using Avalonia.Markup.Xaml;
-using Avalonia.Media;
 
 namespace Task3;
 
 public partial class MainWindow : Window
 {
+
     public static double rad = 1; 
         
     public MainWindow()
@@ -29,22 +27,31 @@ public partial class MainWindow : Window
         }
         catch (Exception)
         {
-            Console.WriteLine("Error!");
+            ResultTB.Text = "Error!";
         }
         
     }
 
     private void CheckPointInside_OnClick(object? sender, RoutedEventArgs e)
     {
-        EllipseShape ellipseShape = new EllipseShape(new Point(100, 100), rad);
-        Point point = new Point(Convert.ToDouble(PointXText.Text), Convert.ToDouble(PointYText.Text));
-        if (ellipseShape.IsPointInside(point))
+        try
         {
-            ResultTB.Text = "Point inside";
+            var h = rad * Math.Sqrt(2);
+            Point centralPoint = new Point(rad, rad);
+            EllipseShape ellipseShape = new EllipseShape(centralPoint, rad);
+            Point point = new Point(Convert.ToDouble(PointXText.Text), Convert.ToDouble(PointYText.Text));
+            if (ellipseShape.IsPointInside(point))
+            {
+                ResultTB.Text = "Point inside";
+            }
+            else
+            {
+                ResultTB.Text = "Point outside";
+            }
         }
-        else
+        catch (Exception)
         {
-            ResultTB.Text = "Point outside";
+            ResultTB.Text = "Error!";
         }
     }
 }

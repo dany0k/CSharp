@@ -18,8 +18,15 @@ namespace Task3
 
         public bool IsPointInside(Point point)
         {
-            var h = Math.Sqrt(point.X * point.X + point.Y * point.Y);
-            return this._radius >= h;
+            var h = Math.Pow((point.X - _x), 2) + Math.Pow((point.Y - _y), 2);
+            if (h <= _radius * _radius)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         public double X
