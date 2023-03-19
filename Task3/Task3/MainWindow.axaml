@@ -1,0 +1,27 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:task3="clr-namespace:Task3"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="Task3.MainWindow"
+        Title="Task3">
+        <Grid>
+                <StackPanel Orientation="Vertical">
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                <TextBlock Margin="20">Radius</TextBlock>
+                                <TextBox Name="RadiusText" Width="100" Height="50" VerticalAlignment="Top" Margin="20"></TextBox>
+                                <TextBlock Margin="20">Point X</TextBlock>
+                                <TextBox Name="PointXText" Width="100" Height="50" VerticalAlignment="Top" Margin="20"></TextBox>
+                                <TextBlock Margin="20">Point Y</TextBlock>
+                                <TextBox Name="PointYText" Width="100" Height="50" VerticalAlignment="Top" Margin="20"></TextBox>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                <Button x:Name="ProcessButton" Width="100" Height="30" Content="Inter Radius" Click="ProcessButton_OnClick" Margin="50"/>
+                                <Button x:Name="ChechPointInside" Width="100" Height="30" Content="Check point" Click="CheckPointInside_OnClick" Margin="50"/>
+                        </StackPanel>
+                        <TextBlock Margin="20" Name="ResultTB" HorizontalAlignment="Center" FontSize="30"></TextBlock>
+                        <task3:DrawCanvas Name="EllipseDrawier" Background="LightGray" Width="600" Height="600"/>
+                </StackPanel>
+        </Grid>
+</Window>
