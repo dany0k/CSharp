@@ -1,0 +1,66 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="Task5.MainWindow"
+        Title="Task5">
+        <Grid>
+                <StackPanel Orientation="Vertical">
+                        <TextBlock HorizontalAlignment="Center" FontSize="30">Bookshelf</TextBlock>
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+                                <StackPanel Orientation="Vertical" Margin="20">
+                                        <TextBlock>Материял</TextBlock>
+                                        <TextBox Name="MaterialTextBox" Width="100" Height="50" VerticalAlignment="Top"></TextBox>
+                                </StackPanel>
+                                <StackPanel Orientation="Vertical" Margin="20">
+                                        <TextBlock>Высота</TextBlock>
+                                        <TextBox Name="HeightTextBox" Width="100" Height="50" VerticalAlignment="Top"></TextBox>
+                                </StackPanel>
+                                <StackPanel Orientation="Vertical" Margin="20">
+                                        <TextBlock>Ширина</TextBlock>
+                                        <TextBox Name="WidthTextBox" Width="100" Height="50" VerticalAlignment="Top"></TextBox>
+                                </StackPanel>
+                                <StackPanel Orientation="Vertical" Margin="20">
+                                        <TextBlock>Глубина</TextBlock>
+                                        <TextBox Name="DepthTextBox" Width="100" Height="50" VerticalAlignment="Top"></TextBox>
+                                </StackPanel>
+                                <StackPanel Orientation="Vertical" Margin="20">
+                                        <TextBlock>Количество полок</TextBlock>
+                                        <TextBox Name="NumShelvesTextBox" Width="100" Height="50" VerticalAlignment="Top"></TextBox>
+                                </StackPanel>
+                                <StackPanel Orientation="Vertical" Margin="20">
+                                        <TextBlock>Имеет стеклянную дверь</TextBlock>
+                                        <TextBox Name="HasGlassDoorTextBox" Width="100" Height="50" VerticalAlignment="Top"></TextBox>
+                                </StackPanel>
+                                <StackPanel Orientation="Vertical" Margin="20">
+                                        <TextBlock>Цвет</TextBlock>
+                                        <TextBox Name="ColorTextBox" Width="100" Height="50" VerticalAlignment="Top"></TextBox>
+                                </StackPanel>
+                        </StackPanel>
+                        <Button Name="AddBookshelfButton" HorizontalAlignment="Center" Click="AddBookshelfButton_OnClick">Добавить шкаф</Button>
+                        <TextBlock Name="ResultBookshelvesTextBlock"></TextBlock>
+                        <StackPanel Orientation="Vertical">
+                        <TextBlock FontSize="30" TextAlignment="Center">Взаимодействие со шкафами</TextBlock>
+                                <StackPanel Orientation="Vertical">
+                                        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Margin="10">
+                                                <TextBlock>Индекс шкафа</TextBlock>
+                                                <TextBox Name="ShelfIndexTextBox"></TextBox>
+                                                <TextBlock>Цвет шкафа</TextBlock>
+                                                <TextBox Name="NewColorTextBox"></TextBox>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                                <Button Name="OpenShelfButton" Click="OpenShelfButton_OnClick">Открыть дверь</Button>
+                                                <Button Name="CloseShelfButton" Click="CloseShelfButton_OnClick">Закрыть дверь</Button>
+                                                <Button Name="ChangeColotButton" Click="ChangeColorButton_OnClick">Перекрасить</Button>
+                                                <Button Name="AddShelfButton" Click="AddShelfButton_OnClick">Добавить полку</Button>
+                                                <Button Name="RemoveShelfButton" Click="RemoveShelfButton_OnClick">Удалить полку</Button>
+                                                <Button Name="CheckDoorButton" Click="CheckDoorButton_OnClick">Материал двери</Button>
+                                                <Button Name="GetInformationButton" Click="GetInformationButton_OnClick">Получить информацию</Button>
+                                        </StackPanel>
+                                        <TextBlock Name="ResultMethodTextBlock" HorizontalAlignment="Center"></TextBlock>
+                                </StackPanel>
+                        </StackPanel>
+                </StackPanel>
+        </Grid>
+</Window>
