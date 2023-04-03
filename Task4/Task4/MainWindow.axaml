@@ -1,0 +1,55 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="Task4.MainWindow"
+        Title="Task4">
+        <Grid>
+                <StackPanel Orientation="Vertical">
+                        <TextBlock HorizontalAlignment="Center" FontSize="30">Sportsman</TextBlock>
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+                                <StackPanel Orientation="Vertical" Margin="20">
+                                        <TextBlock>Фамилия</TextBlock>
+                                        <TextBox Name="SurnameTextBox" Width="100" Height="50" VerticalAlignment="Top"></TextBox>
+                                </StackPanel>
+                                <StackPanel Orientation="Vertical" Margin="20">
+                                        <TextBlock>Число соревнований</TextBlock>
+                                        <TextBox Name="CompAmountTextBox" Width="100" Height="50" VerticalAlignment="Top"></TextBox>
+                                </StackPanel>
+                                <StackPanel Orientation="Vertical" Margin="20">
+                                        <TextBlock>Сумма мест</TextBlock>
+                                        <TextBox Name="PlaceSumTextBox" Width="100" Height="50" VerticalAlignment="Top"></TextBox>
+                                </StackPanel>
+                        </StackPanel>
+                        <TextBlock HorizontalAlignment="Center" FontSize="30">ProSportsman</TextBlock>
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+                                <StackPanel Orientation="Vertical" Margin="20">
+                                        <TextBlock>Фамилия</TextBlock>
+                                        <TextBox Name="ProSurnameTextBox" Width="100" Height="50" VerticalAlignment="Top"></TextBox>
+                                </StackPanel>
+                                <StackPanel Orientation="Vertical" Margin="20">
+                                        <TextBlock>Число соревнований</TextBlock>
+                                        <TextBox Name="ProCompAmountTextBox" Width="100" Height="50" VerticalAlignment="Top"></TextBox>
+                                </StackPanel>
+                                <StackPanel Orientation="Vertical" Margin="20">
+                                        <TextBlock>Сумма мест</TextBlock>
+                                        <TextBox Name="ProPlaceSumTextBox" Width="100" Height="50" VerticalAlignment="Top"></TextBox>
+                                </StackPanel>
+                                <StackPanel Orientation="Vertical" Margin="20">
+                                        <TextBlock>Занимал первое место</TextBlock>
+                                        <TextBox Name="IsFirstPlaceTextBox" Width="100" Height="50" VerticalAlignment="Top"></TextBox>
+                                </StackPanel>
+                        </StackPanel>
+                        <Button HorizontalAlignment="Center" Name="ProcessButton" Click="ProcessButton_OnClick">Рассчитать</Button>
+                        <StackPanel Orientation="Vertical">
+                                <StackPanel Margin="10" Orientation="Horizontal">
+                                        <TextBlock Name="QSportsman"></TextBlock>
+                                </StackPanel>
+                                <StackPanel Margin="10" Orientation="Horizontal">
+                                        <TextBlock Name="QProSportsman"></TextBlock>
+                                </StackPanel>
+                        </StackPanel>
+                </StackPanel>
+        </Grid>
+</Window>
