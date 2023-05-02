@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AvaloniaProject">
+    <option name="projectPerEditor">
+      <map>
+        <entry key="Task6/App.axaml" value="Task6/Task6.csproj" />
+        <entry key="Task6/InputParamsDialog.axaml" value="Task6/Task6.csproj" />
+        <entry key="Task6/MainWindow.axaml" value="Task6/Task6.csproj" />
+      </map>
+    </option>
+  </component>
+</project>
