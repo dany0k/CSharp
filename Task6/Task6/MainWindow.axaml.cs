@@ -11,9 +11,9 @@ namespace Task6;
 public partial class MainWindow : Window
 {
     private List<Type> _types;
-    private List<string> _methods = new List<string>();
+    private List<string> _methods = new();
     private string _currentType;
-    private Object? _currentObject = null;
+    private Object? _currentObject;
 
     public MainWindow()
     {
@@ -21,7 +21,7 @@ public partial class MainWindow : Window
         _types = new List<Type>();
     }
     
-    private void CreateDropPlaun()
+    private void CreateDropDown()
     {
         ClassesComboBox.Items = _types;
         ClassesComboBox.SelectedIndex = 0;
@@ -34,18 +34,20 @@ public partial class MainWindow : Window
         for (int i = 0; i < _methods.Count; i++)
         {
             MethodsGrid.RowDefinitions.Add(new RowDefinition(height: GridLength.Auto));
-            var button = new Button();
-            button.Name = _methods[i];
-            button.Content = _methods[i];
-            button.VerticalAlignment = VerticalAlignment.Center;
-            button.Click += CreateDialogWithParameters;
+            var button = new Button
+            {
+                Name = _methods[i],
+                Content = _methods[i],
+                VerticalAlignment = VerticalAlignment.Center
+            };
+            button.Click += ProcessMethodButton_onClick;
             Grid.SetRow(button, i);
             Grid.SetColumn(button, 0);
             MethodsGrid.Children.Add(button);
         }
     }
 
-    private void CreateDialogWithParameters(object? sender, RoutedEventArgs e)
+    private void ProcessMethodButton_onClick(object? sender, RoutedEventArgs e)
     {
         var parameters = new object[0];
         if (MethodArgsTextBox.Text != null)
@@ -172,7 +174,7 @@ public partial class MainWindow : Window
             MethodArgsTextBox.IsVisible = true;
             ResultTextBlock.IsVisible = true;
             ResultLabelTextBlock.IsVisible = true;
-            CreateDropPlaun();
+            CreateDropDown();
         }
         catch (Exception exception)
         {
