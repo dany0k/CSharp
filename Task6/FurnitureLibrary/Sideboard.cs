@@ -19,6 +19,12 @@ public class Sideboard : Closet
         DecorativeElementsNum = numDecorativeElements;
     }
 
+    public Sideboard()
+    {
+        HasDecorativeElements = false;
+        DecorativeElementsNum = 0;
+    }
+
     public override double CalculatePrice()
     {
         var pricePerShelf = 15.0;
@@ -30,21 +36,24 @@ public class Sideboard : Closet
         return pricePerShelf;
     }
 
-    public void AddDecorativeElement()
+    public string AddDecorativeElement()
     {
         if (!HasDecorativeElements)
         {
             HasDecorativeElements = true;
         }
         DecorativeElementsNum++;
+        return $"Декоративный элемент добавлен. Серван имеет {DecorativeElementsNum} декоративных элементов.";
     }
     
-    public void RemoveDecorativeElement()
+    public string RemoveDecorativeElement()
     {
         DecorativeElementsNum--;
         if (DecorativeElementsNum == 0)
         {
             HasDecorativeElements = false;
         }
+        return $"Декоративный элемент удален. Серван имеет {DecorativeElementsNum} декоративных элементов.";
+
     }
 }

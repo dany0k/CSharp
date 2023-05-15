@@ -10,6 +10,11 @@ public class Showcase : Closet
         HasLight = hasLight;
     }
 
+    public Showcase()
+    {
+        HasLight = true;
+    }
+
     public string turnOnLight()
     {
         return "Свет теперь включен";

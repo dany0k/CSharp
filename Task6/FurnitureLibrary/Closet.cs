@@ -2,7 +2,7 @@ namespace FurnitureLibrary;
 
 public abstract class Closet : IFurniture
 {
-    public string Material { get; set; }
+    public string Material;
     protected int Height { get; set; }
     protected int Width { get; set; }
     protected int Depth { get; set; }
@@ -15,6 +15,15 @@ public abstract class Closet : IFurniture
         Width = width;
         Depth = depth;
         NumShelves = numShelves;
+    }
+
+    protected Closet()
+    {
+        Material = "oak";
+        Height = 2000;
+        Width = 1000;
+        Depth = 500;
+        NumShelves = 5;
     }
 
     public virtual string GetInfo()
@@ -32,6 +41,17 @@ public abstract class Closet : IFurniture
     public string Close()
     {
         return "Дверь закрыта";
+    }
+
+    public string SetMaterial(string material)
+    {
+        Material = material;
+        return $"Изменен материал на {material}";
+    }
+
+    public string GetMaterial()
+    {
+        return $"Материал: {Material}";
     }
 
     public string AddShelf()

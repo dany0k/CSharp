@@ -6,19 +6,30 @@
         x:Class="Task6.MainWindow"
         Title="Task6">
         <StackPanel Margin="5">
-                <TextBlock>Введите название библиотеки</TextBlock>
-                <TextBox Name="PathToDllTextBlock"></TextBox>
-                <Button Name="LoadDllButton" HorizontalAlignment="Center" Click="LoadDllButton_OnClick"></Button>
-                <Grid Name="ClassesGrid">
-                        <Grid.RowDefinitions>
-                                <RowDefinition Height="Auto"></RowDefinition>
-                        </Grid.RowDefinitions>
-                </Grid>
-                <TextBlock HorizontalAlignment="Center">Методы:</TextBlock>
-                <Grid Name="MethodsGrid">
-                        <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*"></ColumnDefinition>
-                        </Grid.ColumnDefinitions>
-                </Grid>
+                <TextBox Name="PathToDllTextBlock" Watermark="Название библиотеки" Margin="16"></TextBox>
+                <TextBlock IsVisible="False" HorizontalAlignment="Center" Name="ErrorTextBlock">Не удалось найти данную библиоткеку!</TextBlock>
+                <Button Name="LoadDllButton" HorizontalAlignment="Center" Click="LoadDllButton_OnClick">Выполнить</Button>
+                <StackPanel Orientation="Horizontal">
+                        <ComboBox IsVisible="False" Name="ClassesComboBox" SelectedIndex="0" Margin="16">
+                        </ComboBox>
+                        <Button IsVisible="False" Name="ShowMethodsButton" Width="200" Margin="16" Click="ShowMethods_OnClick" HorizontalAlignment="Center">Показать методы</Button>
+                </StackPanel>
+                <TextBox Name="MethodArgsTextBox" IsVisible="False" Watermark="Параметры передаваемые в метод" Margin="16"></TextBox>
+                <StackPanel Orientation="Horizontal" MaxWidth="Infinity">
+                        <StackPanel Orientation="Vertical">
+                                <TextBlock IsVisible="False" Name="MethodsTextBlock" HorizontalAlignment="Center">Методы:</TextBlock>
+                                <Grid Name="MethodsGrid">
+                                        <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                        </Grid.ColumnDefinitions>
+                                </Grid>
+                        </StackPanel>
+                        <StackPanel Orientation="Vertical">
+                                <TextBlock IsVisible="False" Name="ResultLabelTextBlock" HorizontalAlignment="Center">Результат:</TextBlock>
+                                <TextBlock Name="ErrorMethodArgsTextBox" IsVisible="False" HorizontalAlignment="Center">Неверное количество передаваемых параметров</TextBlock>
+                                <TextBlock IsVisible="False" Name="ResultTextBlock" HorizontalAlignment="Center"></TextBlock>
+                        </StackPanel>
+                </StackPanel>
+                
         </StackPanel>
 </Window>

@@ -12,6 +12,12 @@ public class Bookshelf : Closet
         Color = color;
     }
 
+    public Bookshelf()
+    {
+        HasGlassDoor = false;
+        Color = "Brown";
+    }
+
     public override string GetInfo()
     {
         if (HasGlassDoor)
@@ -35,7 +41,6 @@ public class Bookshelf : Closet
     public string Paint(string color)
     {
         Color = color;
-        Console.WriteLine(color);
-        return "Шкаф покрашен в "+ color + " цвет.";
+        return "Шкаф покрашен в " + color + " цвет.";
     }
 }
